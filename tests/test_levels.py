@@ -35,7 +35,7 @@ if __name__ == "__main__":
     ------------------------------------------
     """
     num_levels = 4
-    num_tests = 3
+    num_tests = 10
 
     num_errors = np.ones([num_levels, num_tests])
 
