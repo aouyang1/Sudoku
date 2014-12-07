@@ -27,12 +27,21 @@ if __name__ == "__main__":
 
     m.set_start("initialize_state")
 
-    num_errors = np.ones([4, 50])
-    num_tests = 50
+    """
+    ------------------------------------------
+    Define testing parameters
+    - max levels = 4
+    - max tests = 50
+    ------------------------------------------
+    """
     num_levels = 4
+    num_tests = 3
+
+    num_errors = np.ones([num_levels, num_tests])
+
     for level in range(1, num_levels+1):
         for num in range(1, num_tests+1):
-            fname = 'level' + str(level) + '\\sudoku_level' + str(level) + '_' + str(num) + '.csv'
+            fname = '../level' + str(level) + '/sudoku_level' + str(level) + '_' + str(num) + '.csv'
             m.run(fname)
 
             dir_name = os.path.dirname(fname)
@@ -54,6 +63,6 @@ if __name__ == "__main__":
 
     print "-----------------------------------------"
     for level in range(0, num_levels):
-        print "level {} {} percent correct: ".format(level+1, percent_correct[level])
+        print "level {}: {} % out of {} ".format(level+1, percent_correct[level], num_tests)
 
 
