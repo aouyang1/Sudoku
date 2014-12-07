@@ -1,7 +1,7 @@
 __author__ = 'Austin Ouyang'
 
-from statemachine import StateMachine
-from transitions import Transitions
+from util.statemachine import StateMachine
+from util.transitions import Transitions
 
 if __name__ == "__main__":
     m = StateMachine()

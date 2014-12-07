@@ -6,7 +6,7 @@ BruteForce class with the fields:
 - 'sudoku', sudoku table which will be copied from the workind sudoku table after brute force is put into effect
 """
 
-from sudokutable import SudokuTable
+from util.sudokutable import SudokuTable
 
 
 class BruteForce:

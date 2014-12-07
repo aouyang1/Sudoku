@@ -16,10 +16,10 @@ Transition class containing the functions for the next state in the finite state
 """
 
 import os
-import numpy as np
-from sudokutable import SudokuTable
-from bruteforce import BruteForce
 
+import numpy as np
+from util.sudokutable import SudokuTable
+from util.bruteforce import BruteForce
 
 
 class Transitions:
