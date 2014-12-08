@@ -8,9 +8,9 @@ Solves a Sudoku puzzle in a csv file format and writes the solution to the same 
 ## How
 
 ### Running
-Example:
-python sudoku_main.py
-Enter path of csv file: level1/sudoku_level1_1.csv
+Example:  
+python sudoku_main.py  
+Enter path of csv file: level1/sudoku_level1_1.csv  
 
 
 ### Testing
