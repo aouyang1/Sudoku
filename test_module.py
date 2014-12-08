@@ -13,13 +13,13 @@ if __name__ == "__main__":
     ------------------------------------------
     """
     level_select = [1, 2, 3, 4]
-    num_tests = 10
+    num_tests = 3
 
     num_errors = np.ones([4, num_tests])
 
     for level in level_select:
         for num in range(1, num_tests+1):
-            fname = '../level' + str(level) + '/sudoku_level' + str(level) + '_' + str(num) + '.csv'
+            fname = 'level' + str(level) + '/sudoku_level' + str(level) + '_' + str(num) + '.csv'
             sudoku_main.main(fname)
 
             dir_name = os.path.dirname(fname)
