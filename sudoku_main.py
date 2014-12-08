@@ -28,6 +28,9 @@ def main(*args):
     if len(args) == 1:
         filename = args[0]
     else:
+        if len(args) > 1:
+            print "Too many input arguments."
+
         filename = raw_input("Enter path of csv file: ")
 
     m.run(filename)
