@@ -3,7 +3,8 @@ __author__ = 'Austin Ouyang'
 from util.statemachine import StateMachine
 from util.transitions import Transitions
 
-if __name__ == "__main__":
+
+def main(*args):
     m = StateMachine()
 
     t = Transitions()       # next state functions for state machine
@@ -20,12 +21,17 @@ if __name__ == "__main__":
     m.add_state("stuck_state", t.stuck_transitions)
     m.add_state("error_state", t.error_transitions)
 
-
     m.add_state("finished_state", None, end_state=1)
 
     m.set_start("initialize_state")
 
-    filename = raw_input("Enter path of csv file: ")
+    if len(args) == 1:
+        filename = args[0]
+    else:
+        filename = raw_input("Enter path of csv file: ")
+
     m.run(filename)
 
+if __name__ == "__main__":
+    main()
 
