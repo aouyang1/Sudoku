@@ -232,21 +232,12 @@ class Transitions:
 
         new_state = "finished_state"
 
-        print 'FINAL TABLE'
-        print Sudoku.table
-        print "------"
-        print 'FINAL POSSIBILITIES'
-        print np.concatenate([Sudoku.unmarked.table_idx, Sudoku.unmarked.possibilities], axis=1)
-        print 'unknowns: ', sum(sum(Sudoku.table < 1))
-        print 'possibilities: ', Sudoku.unmarked.get_total_possibilities()
-
         # write solved table to csv file
         dir_name = os.path.dirname(Sudoku.fname)
         input_name = os.path.basename(Sudoku.fname)
         split_input_name = os.path.splitext(input_name)
         solved_name = os.path.join(dir_name, split_input_name[0] + "_solved" + split_input_name[1])
         np.savetxt(solved_name, Sudoku.table.astype(int), fmt='%d', delimiter=',')
-        print "Solved sudoku save to {}".format(solved_name)
 
         return new_state, (Sudoku, Brute)
 
@@ -257,10 +248,7 @@ class Transitions:
         # read sudoku csv file
         sudoku_table = np.genfromtxt(sudoku_table_fname, delimiter=",")
 
-        print "file name: {}".format(sudoku_table_fname)
-        print "ORIGINIAL TABLE"
-        print sudoku_table
-        print "-----"
+        print "solving {}".format(sudoku_table_fname)
 
         # find rows, columns in table that need to be solved
         table_row, table_col = np.where(sudoku_table == 0)
