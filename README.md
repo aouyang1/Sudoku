@@ -26,6 +26,8 @@ testing parameters:
 1. level_select: list containing difficulty levels to test  
 2. num_tests: number of tests to perform at each difficult (max of 50)  
 
+* also can run unit test for each level over all 50 puzzles per level
+
 Example:  
 python test_mod.py 
 
