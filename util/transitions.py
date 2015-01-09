@@ -69,9 +69,7 @@ class Transitions:
         new_num_possibilities = Sudoku.unmarked.get_total_possibilities()
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "matching_pairs_in_row_state"
@@ -89,9 +87,7 @@ class Transitions:
         new_num_possibilities = Sudoku.unmarked.get_total_possibilities()
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "matching_pairs_in_col_state"
@@ -109,9 +105,7 @@ class Transitions:
         new_num_possibilities = Sudoku.unmarked.get_total_possibilities()
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "single_in_zone_state"
@@ -130,9 +124,7 @@ class Transitions:
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
         # next state logic
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "single_in_row_state"
@@ -151,9 +143,7 @@ class Transitions:
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
         # next state logic
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "single_in_col_state"
@@ -172,9 +162,7 @@ class Transitions:
         possibilities_changed = old_num_possibilities != new_num_possibilities
 
         # next state logic
-        if Sudoku.unmarked.solved():
-            new_state = "show_results_state"
-        elif possibilities_changed:
+        if possibilities_changed:
             new_state = "single_unmarked_state"
         else:
             new_state = "stuck_state"
