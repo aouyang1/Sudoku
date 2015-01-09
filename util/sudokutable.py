@@ -17,7 +17,7 @@ functions:
 """
 
 import numpy as np
-from util.unmarked import Unmarked
+from unmarked import Unmarked
 
 
 class SudokuTable:
