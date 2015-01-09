@@ -18,7 +18,7 @@ _**0**_,&nbsp;4,&nbsp;3,&nbsp;_**0**_,&nbsp;5,&nbsp;2,&nbsp;9,&nbsp;7,&nbsp;_**0
 8,&nbsp;_**0**_,&nbsp;_**0**_,&nbsp;9,&nbsp;_**0**_,&nbsp;_**0**_,&nbsp;5,&nbsp;2,&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8,&nbsp;7,&nbsp;1,&nbsp;9,&nbsp;4,&nbsp;3,&nbsp;5,&nbsp;2,&nbsp;6<br/>
 
 ## Approach
-First link potential number possibilities with each unsolved cell
+First link potential number possibilities with each unsolved cell<br/>
 Uses a state machine with various puzzle strategies to reduce possibilities in each unsoved cell.<br/>
 Strategies:
 - s1: matching possibility pairs in the same zone: all possibilities in the same zone with the same pair are deleted
