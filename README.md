@@ -43,5 +43,5 @@ Testing data can be found in the level1, level2, level3, and level4 folders
 Each test represents a specific difficulty with 50 test problems. The test solves each problem and compares directly with the expected solution.
 
 Terminal example:  
-sudoku_path$ nosetests
+$ nosetests
 
